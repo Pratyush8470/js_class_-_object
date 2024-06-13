@@ -7,42 +7,41 @@
     <title>4</title>
 </head>
 
-    <h1 id="a"></h1></br></br>
-    <h1 id="b"></h1>
+<h1 id="a"></h1></br></br>
+<h1 id="b"></h1>
 
 <body>
 
 
     <script>
-        class circle{
-            constructor(name,pi,r,ans){
-                this.name=name;
-                this.pi=pi;
-                this.r=r;
-                this.ans=pi*r*r;
+        class Shape {
+            constructor(name, pi, r, w, h) {
+                this.name = name;
+                this.pi = pi;
+                this.r = r;
+                this.w = w;
+                this.h = h;
+
+                if (name === "circle") {
+                    this.ans = pi * r * r;
+                } else if (name === "rectangle") {
+                    this.ans = w * h;
+                }
             }
-            intro() {
-                document.getElementById('a').innerHTML=(`name = ${this.name},</br>r=${this.r} than area of circle is ${this.ans}`)
+
+            circle() {
+                document.getElementById('a').innerHTML = (`name = ${this.name},</br>r=${this.r} than area of circle is ${this.ans}`);
+            }
+
+            rectangle() {
+                document.getElementById('b').innerHTML = (`name = ${this.name},</br>w=${this.w} & h=${this.h} than area of rectangle is ${this.ans}`);
             }
         }
 
-        class rectangle{
-            constructor(name,w,h,ans){
-                this.name=name;
-                this.w=w;
-                this.h=h;
-                this.ans=w*h;
-            }
-            intro() {
-                document.getElementById('b').innerHTML=(`name = ${this.name},</br>w=${this.w} & h=${this.h}than area of rectangle is ${this.ans}`)
-            }
-        }
-        
-
-        let a = new circle("circle",3.14,7);
-        a.intro ();
-        let b = new rectangle("rectangle",8,7);
-        b.intro ();
+        let a = new Shape("circle", 3.14, 7);
+        a.circle();
+        let b = new Shape("rectangle", 6, 5, 10, 8);
+        b.rectangle();
 
 
     </script>
