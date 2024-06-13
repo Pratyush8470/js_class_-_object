@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+
+    <h1 id="a"></h1></br></br>
+    <h1 id="b"></h1></br></br>
+    <h1 id="c"></h1>
+
+<body>
+
+
+    <script>
+        class School {
+            constructor(name, email, contact, field) {
+                this.name = name;
+                this.email = email;
+                this.contact = contact;
+                this.field = field;
+            }
+            students() {
+                document.getElementById('a').innerHTML=(`name = ${this.name},</br>email = ${this.email}</br>contact = ${this.contact}</br>field = ${this.field}`)
+            }
+            peon() {
+                document.getElementById('b').innerHTML=(`name = ${this.name},</br>email = ${this.email}</br>contact = ${this.contact}</br>field = ${this.field}`)
+            }
+            teacher() {
+                document.getElementById('c').innerHTML=(`name = ${this.name},</br>email = ${this.email}</br>contact = ${this.contact}</br>field = ${this.field}`)
+            }
+        }
+        
+
+        let a = new School("raj patel","raj01@gmail.com",9596979892,"Student");
+        a.students ();
+
+        let b = new School("veer","veer@gmail.com",9576979892,"peon");
+        b .peon ();
+
+        let c = new School("rakesh","rakesh4@gmail.com",9526979892,"Teacher");
+        c .teacher ();
+    </script>
+</body>
+
+</html>
